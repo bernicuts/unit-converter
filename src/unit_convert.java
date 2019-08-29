@@ -7,10 +7,9 @@ public class unit_convert {
 		System.out.println("hai sa comparam mere cu pere");
 		
 		Scanner user_int = new Scanner(System.in);
-		
+		System.out.println("provide your integer");
 		int numar = user_int.nextInt();
-		System.out.print("provide your integer:"+);
+
 	}
-	
 
 }

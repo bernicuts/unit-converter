@@ -1,30 +1,29 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-//adaugat metric-converter
+
 public class unit_convert {
+
 	public static void main (String[] args) {
-		System.out.println("___the conversion is being started___");
-		System.out.println("-\\hai sa comparam mere cu pere\\-");
+		System.out.println("Unit converter has started (v1.0)");
 		
-		boolean varType = true ; // that would be a sentinel variable
+		boolean isCorrectlyProvisioned = false ;
 		
-		while(varType) {
-			
+		while(!isCorrectlyProvisioned) {
+			Scanner userInt = null;
 			try {
-				Scanner user_int = new Scanner(System.in);
-				System.out.print("provide your integer:");
-				int numar = user_int.nextInt();
-				System.out.print("you have successfuly entered:" + numar);
-				varType = false;
-			}
-			catch (Exception e) {
-				System.out.println("value invalid, try again with a number...\n");
+				userInt = new Scanner(System.in);
+				System.out.print("Enter a valid integer:");
+				int number = userInt.nextInt();
+				System.out.print("You have successfully entered: " + number);
+				isCorrectlyProvisioned = true;
+			} catch (InputMismatchException ex) {
+				System.out.println("Please enter a valid number...\n");
+			} finally {
+				if (userInt != null) {
+					userInt.close();
+				}
 			}
 		}
-
-		
-		
-	
 	}
-
 }

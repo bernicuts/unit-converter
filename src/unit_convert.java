@@ -8,22 +8,20 @@ public class unit_convert {
 		System.out.println("Unit converter has started (v1.0)");
 		
 		boolean isCorrectlyProvisioned = false ;
-		
+		Scanner consoleReader = null;
+
 		while(!isCorrectlyProvisioned) {
-			Scanner userInt = null;
+			System.out.print("Enter a valid integer:");
 			try {
-				userInt = new Scanner(System.in);
-				System.out.print("Enter a valid integer:");
-				int number = userInt.nextInt();
-				System.out.print("You have successfully entered: " + number);
+				consoleReader = new Scanner(System.in);
+				int enteredNumber = consoleReader.nextInt();
 				isCorrectlyProvisioned = true;
+				System.out.print("You have successfully entered: " + enteredNumber);
 			} catch (InputMismatchException ex) {
 				System.out.println("Please enter a valid number...\n");
-			} finally {
-				if (userInt != null) {
-					userInt.close();
-				}
 			}
 		}
+
+		consoleReader.close();
 	}
 }

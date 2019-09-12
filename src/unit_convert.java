@@ -21,7 +21,7 @@ public class unit_convert {
 				System.out.println("Please enter a valid number...\n");
 			}
 		}
-
-		consoleReader.close();
+		
+		 consoleReader.close();
 	}
 }

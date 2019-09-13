@@ -9,7 +9,7 @@ public class unit_convert {
 		
 		boolean isCorrectlyProvisioned = false ;
 		Scanner consoleReader = null;
-
+		
 		while(!isCorrectlyProvisioned) {
 			System.out.print("Enter a valid integer:");
 			try {
@@ -17,6 +17,21 @@ public class unit_convert {
 				int enteredNumber = consoleReader.nextInt();
 				isCorrectlyProvisioned = true;
 				System.out.print("You have successfully entered: " + enteredNumber);
+				
+				private boolean isLegal(int enteredNumber1) {
+					boolean a = false;
+					if (enteredNumber1 > 0);
+						a = True;
+					return a;
+				}
+
+				private int getUserInt(){
+					if (isLegal(Number))
+					return this.Number;
+				}
+				
+				
+				
 			} catch (InputMismatchException ex) {
 				System.out.println("Please enter a valid number...\n");
 			}

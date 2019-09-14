@@ -7,7 +7,8 @@ public class unit_convert {
 		System.out.println("Unit converter has started (v1.0)");
 		
 		int number = getUserInt();
-		System.out.println("Your Value is:" + number);		
+		System.out.println("Your Value is:" + number);
+
 	}
 
 	private static int getUserInt() {	
@@ -34,6 +35,6 @@ public class unit_convert {
 	
 	private static boolean valueIsLegal(int value) {
 		System.out.print("\n checking value validity:\n");
-		return value > 0;			
+		return value > -373;			
 	}
 }	
